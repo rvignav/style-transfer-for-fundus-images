@@ -1,1 +1,1 @@
-# style-transfer-for-fundus-imaging
+# style-transfer-for-fundus-images
