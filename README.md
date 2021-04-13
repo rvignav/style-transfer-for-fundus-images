@@ -8,3 +8,9 @@
 4. Place `trainLabels.csv` into the `train` folder.
 5. Place the `train` folder in a folder called `input`.
 6. Run [`dr_detect.ipynb`](https://github.com/rvignav/style-transfer-for-fundus-images/blob/main/dr_detect.ipynb) in the same directory as `input`.
+
+# Notes
+
+Kaggle notebook: [here](https://www.kaggle.com/satyavejus/dr-fundus)
+
+TFRecords datasets: [regular](https://www.kaggle.com/luigisaetta/diabetic-tfrecords), [stylized](https://www.kaggle.com/satyavejus/db-stylized-tfrecords)
