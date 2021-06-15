@@ -11,5 +11,5 @@
 
 # Notes
 
- - Kaggle notebook: [here](https://www.kaggle.com/satyavejus/dr-fundus)
+ - Kaggle notebook: [here](https://www.kaggle.com/rvignav/dr-fundus)
  - TFRecords datasets: [regular](https://www.kaggle.com/luigisaetta/diabetic-tfrecords), [stylized](https://www.kaggle.com/satyavejus/db-stylized-tfrecords)
