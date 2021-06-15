@@ -4,9 +4,9 @@ import csv
 import argparse
 
 parser = argparse.ArgumentParser(description='')
-parser.add_argument('--stylized', help='y/n')
+parser.add_argument('--stylized', help='a (S->S)/b (NS->NS)/c (S->NS)')
 args = parser.parse_args()
-s = args.stylized == 'y'
+s = args.stylized
 
 labels = {}
 
@@ -24,10 +24,12 @@ with open('y_true.csv') as csv_file:
             val = 1
         labels[row[0]] = val
 
-if s:
+if s == 'a':
     fname = 'submission_S->S.csv'
-else:
+elif s == 'b':
     fname = 'submission_NS->NS.csv'
+else:
+    fname = 'submission_S->NS.csv'
 
 with open(fname) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
@@ -39,14 +41,18 @@ with open(fname) as csv_file:
         ID = row[0]
         y_true.append(labels[ID])
 
-if s:
+if s == 'a':
     targets = loadtxt('preds_S->S.txt', delimiter=' ')[:, 1]
-else:
+elif s == 'b':
     targets = loadtxt('preds_NS->NS.txt', delimiter=' ')[:, 1]
-
-if s:
-    sub = 'S->S: '
 else:
+    targets = loadtxt('preds_S->NS.txt', delimiter=' ')[:, 1]
+
+if s == 'a':
+    sub = 'S->S: '
+elif s == 'b':
     sub = 'NS->NS: '
+else:
+    sub = 'S->NS: '
 
 print(sub + str(roc_auc_score(y_true, targets)))
