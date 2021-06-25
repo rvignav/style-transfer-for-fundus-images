@@ -12,4 +12,4 @@
 # Notes
 
  - Kaggle notebook: [here](https://www.kaggle.com/rvignav/dr-fundus)
- - TFRecords datasets: [regular](https://www.kaggle.com/luigisaetta/diabetic-tfrecords), [stylized](https://www.kaggle.com/satyavejus/db-stylized-tfrecords)
+ - TFRecords datasets: [regular](https://www.kaggle.com/luigisaetta/diabetic-tfrecords), [stylized (alpha=0.3)](https://www.kaggle.com/satyavejus/db-stylized-tfrecords), [stylized (alpha=0.7)](https://www.kaggle.com/rvignav/db-alpha-07-tfrecords)
